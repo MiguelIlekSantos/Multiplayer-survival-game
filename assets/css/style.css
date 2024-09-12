@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --body-bg: #000514;
+    --body-color: #ffffff;
+    --body-f-family: "Jersey 10";
+    --btn-f-family: "Inconsolata";
+    --border-width: 150%;
+    --border-height: 150%;
+    --border-color-one: #00ffea;
+    --border-color-two: #9232ff;
+    --sup-border-width: 98%;
+    --sup-border-height: 98%;
+    --section-border: #00ffdd;
+    --section-bg: #000822;
+
+    --enemy-bg: #000b31;
+    
+    --player-content-bg: #0e1738;
+    --player-one-color: #ff0000;
+    --player-two-color: #ffff00;
+    --player-three-color: #0000ff;
+    --player-four-color: #008000;
+
+    --login-bg: #000822;
+    --login-btn-color: #ffffff;
+    --login-btn-bg: #3bffbe;
+    --login-btn-border: #3bffbe;
+    --login-input-color: #ffffff;
+    --login-input-bg: #00061a;
+    --login-input-border: #101b3f;
+
+    --scrollbar-bg: #01002c;
+    --scrollbar-thumb-bg: #27004b;
+
+    --request-btn-border: #00e1ff; 
+
+    --start-btn-bg: #000b31;
+    --start-btn-color: #00e1ff;
+    --start-btn-border: #00e1ff;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--scrollbar-thumb-bg);
+}
+
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-bg);
+    overflow: hidden;
+    font-family: var(--body-f-family);
+    margin: 0px;
+    padding: 0px;
+}
+
+button,
+input {
+    font-family: var(--btn-f-family);
+}
+
+figure{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.border {
+    width: var(--border-width);
+    height: var(--border-height);
+    position: absolute;
+    background-image: linear-gradient(to right, var(--border-color-one), var(--border-color-two));
+    border-radius: 10px;
+    animation: border-animation linear 2s infinite;
+}
+
+.sup-border{
+    border-radius: 10px;
+    width: var(--sup-border-width);
+    height: var(--sup-border-height);
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+/* -------------------------------LOGIN WINDOW------------------------------ */
+
+
+
+
+
+
+
+#login {
+    display: flex;
+}
+
+.sub-login {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.info {
+    background-color: var(--login-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sub-login div p {
+    width: 100%;
+    flex: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--body-color);
+    letter-spacing: 5px;
+    font-size: 3rem;
+    margin: 0px;
+    padding: 0px;
+}
+
+.sub-login div form {
+    width: 100%;
+    flex: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding: 0px 20px;
+    gap: 20px;
+}
+
+.sub-login div form input {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--login-input-bg);
+    border: 1px solid var(--login-input-border);
+    color: var(--login-input-color);
+    padding-left: 20px;
+}
+
+.sub-login div form button {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--login-btn-bg);
+    border: 1px solid var(--login-btn-border);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.1s;
+}
+
+.sub-login div form button:hover{
+    filter: brightness(0.5);
+}
+
+.sub-login div form button:active{
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/* -----------------------------------DASHBOARD------------------------------------ */
+
+
+
+
+
+
+
+#dashboard {
+    display: none;
+}
+
+.sub-dashboard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    flex: 5%;
+}
+
+.footer {
+    width: 100%;
+    flex: 15%;
+}
+
+.main {
+    width: 100%;
+    flex: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.lists{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 20%;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid var(--section-border);
+    background-color: var(--section-bg);
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: var(--body-color);
+    font-size: 2rem;
+}
+
+.topics{
+    font-size: 1rem;
+    width: 100%;
+    min-height: 50px;
+    background-color: var(--enemy-bg);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.enemyList, .requests{
+    --border-width: 150%;
+    --border-height: 700%;
+}
+
+.enemy{
+    transition: 0.1s;
+    /* border: 1px solid var(--section-border); */
+}
+
+.enemy:hover{
+    transform: scale(1.05);
+}
+
+.enemy:active{
+    transform: scale(1);
+}
+
+.enemy:hover .enemy-info{
+    width: 95%;
+    height: 95%;
+}
+
+.enemy-info{
+    transition: 0.1s;
+    color: var(--body-color);
+    background-color: var(--enemy-bg);   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    --sup-border-width: 100%;
+    --sup-border-height: 100%;
+}
+
+.enemy-info div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.ball{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.enemy-info p{
+    padding: 0px;
+    margin: 0px;
+}
+
+.enemy-info p:nth-child(1){
+    letter-spacing: 1px;
+}
+
+.request{
+    color: var(--body-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;    
+}
+
+.request-counter{
+    flex: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.names{
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.names p:nth-child(2){
+    letter-spacing: 1px;
+}
+
+.options{
+    flex: 30%;  
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.options div{
+    width: 90%;
+    height: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--body-f-family);
+    border: 0px solid var(--request-btn-border);
+    transition: 0.1s;
+}
+
+.options div:hover{
+    border: 1px solid var(--request-btn-border);
+}
+
+.options div:active{
+    transform: scale(1.1);
+}
+
+.options div:nth-child(1){
+    background-color: #10722e;
+}
+
+.options div:nth-child(2){
+    background-color: #921d1d;
+}
+
+.requests{
+    gap: 15px !important;
+}
+
+.request{
+    min-height: 60px !important;
+    /* border: 1px solid var(--section-border); */
+}
+
+.request p{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.request p:nth-child(1){
+    font-size: 0.9rem;
+    font-family: var(--btn-f-family);
+}
+
+.request p:nth-child(2){
+    font-size: 1.1rem;
+}
+
+.party{
+    background-color: var(--section-bg);
+    border-radius: 10px;
+    border: 1px solid var(--section-border);
+    height: 100%;
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sub-party{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    gap: 10px;
+}
+
+.player{
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+    background-color: var(--player-content-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.player p{
+    color: var(--body-color);
+    font-size: 2rem;
+    margin: 0px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.player-one{
+    border: 3px solid var(--player-one-color);
+}
+
+.player-two{
+    border: 3px solid var(--player-two-color);
+}
+
+.player-three{
+    border: 3px solid var(--player-three-color);
+}
+
+.player-four{
+    border: 3px solid var(--player-four-color);
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 20px;
+}
+
+.footer button{
+    width: 20%;
+    height: 100%;
+    border: none;
+    color: var(--start-btn-color);
+    font-family: var(--btn-f-family);
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: var(--start-btn-bg);
+    transform: skew(-20deg);
+    border: 1px solid var(--start-btn-border);
+    transition: 0.1s;
+}
+
+.footer button:hover{
+    filter: brightness(0.6);
+}
+
+.footer button:active{
+    filter: brightness(1);
+    transform: scale(1.1) skew(-20deg);
+}
+
+
+
+
+
+
+
+/* --------------------------------STARTING------------------------------------- */
+
+
+
+
+
+
+
+#starting{
+    display: none;
+    top: 0;
+    background-color: #000000ec;
+    position: absolute;
+    z-index: 999;
+}
+
+#starting div{
+    width: 300px;
+    height: 300px;
+    border: 1px solid var(--section-border);
+    border-radius: 10px;
+    color: var(--body-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#starting div p{
+    font-size: 10rem;
+    margin: 0px;
+    padding: 0px;
+}
+
+#starting div button{
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid var(--section-border);
+    background-color: #a50000;
+    color: var(--body-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.1s;
+}
+
+#starting div button:hover{
+    background-color: #880000;
+}
+
+#starting div button:active{
+    transform: scale(0.9);
+}
+
+
+
+
+
+#dashboard canvas{
+    /* border: 1px solid blue; */
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .main{
+        justify-content: center;
+    }
+    .lists{
+        width: 25%;
+    }
+    .footer button{
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+@keyframes border-animation {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}

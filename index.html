@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="content" id="login">
+        <div class="sub-login">
+            <div class="border"></div>
+            <div class="info sup-border">
+                <p>LOGIN</p>
+                <form action="">
+                    <input type="text" id="nickname">
+                    <button type="button" onclick="register()">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="dashboard">
+        <div class="sub-dashboard">
+            <div class="header"></div>
+
+            <div class="main">
+                <div class="enemyList lists" id="enemyList">
+
+                </div>
+
+                <div class="party">
+                    <div class="sub-party" id="party1">
+                        <div class="player player-one">
+                            <p class="player-one" id="play1nick">Nickname</p>
+                            <canvas id="canvas-1"></canvas>
+                        </div>
+                    </div>
+                    <div class="sub-party" id="party2">
+                    
+                    </div>
+                </div>
+
+                <div class="requests lists" id="requestList">
+
+                </div>
+            </div>
+
+            <div class="footer">
+                <button onclick="startCounting()">Start</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="starting">
+        <div>
+            <p id="startingNum">5</p>
+            <button id="cancelStarting" onclick="cancelStart()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="content" id="canvas-content">
+        <canvas id="canvas"></canvas>
+    </div>
+
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="assets/js/ImageCharging.js"></script>
+    <script src="assets/js/Lobbycanvas.js"></script>
+    <script src="assets/js/lobby.js"></script>
+
+    <script src="assets/js/game/Rect.js"></script>
+    <script src="assets/js/game/Minimap.js"></script>
+    <script src="assets/js/game/Inventory.js"></script>
+    <script src="assets/js/game/Tilemap.js"></script>
+    <script src="assets/js/game/Listener.js"></script>
+    <script src="assets/js/game/NameLabel.js"></script>
+    <script src="assets/js/game/Animation.js"></script>
+    <script src="assets/js/game/Muppet.js"></script>
+    <script src="assets/js/game/Player.js"></script>
+    <script src="assets/js/game/Game.js"></script>
+    <script src="assets/js/game/main.js"></script>
+</body>
+
+</html>
