@@ -9,7 +9,7 @@ class Game {
 
         names.forEach((name, index) => {
             if (index + 1 == actualPlayerIndex) {
-                this.player = new Player(name, this.colors[index], index + 1, this.ctx, this.scale)
+                this.player = new Player(name, this.colors[index], index + 1, this.ctx, this.scale, this.canvas)
             }
             else {
                 let muppet = new Muppet(name, this.colors[index], index + 1, this.ctx, this.scale)
@@ -22,8 +22,6 @@ class Game {
         this.muppets.forEach(muppet => {
             this.players.push(muppet)
         });
-
-        console.log(this.players)
 
         this.tilemap = new Tilemap(this.ctx, TilemapSprite[2], 2)
         this.minimap = new Minimap(this.ctx, 0.1, TilemapSprite[2], this.players)
@@ -54,7 +52,7 @@ class Game {
             let play = playersData[playe]
 
             if (play.name === this.player.name) {
-                this.player.update(play.gameData, keySetData)
+                this.player.update(play.gameData, keySetData, this.canvas)
             }
             else {
                 this.muppets.forEach(muppet => {

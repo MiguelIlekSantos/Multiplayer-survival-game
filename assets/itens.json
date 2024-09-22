@@ -1,0 +1,359 @@
+{
+    "Necklaces": {
+        "Speed necklace": {
+            "description": "Increases speed by 3",
+            "points": [
+                3
+            ],
+            "effects": [
+                "speed"
+            ],
+            "spawnChance": 40
+        },
+        "Reinforced speed necklace": {
+            "description": "Increases speed by 5",
+            "points": [
+                5
+            ],
+            "effects": [
+                "attackSpeed"
+            ],
+            "spawnChance": 20
+        },
+        "Hermes Necklace": {
+            "description": "Increases speed and attack speed by 5",
+            "points": [
+                5,
+                5
+            ],
+            "effects": [
+                "speed",
+                "attackSpeed"
+            ],
+            "spawnChance": 10
+        },
+        "Zeus Necklace": {
+            "description": "Increases all stats by 5",
+            "points": [
+                5
+            ],
+            "effects": [
+                "all"
+            ],
+            "spawnChance": 5
+        }
+    },
+    "Rings": {
+        "Healing ring": {
+            "description": "Increases health regeneration by 5",
+            "points": [
+                5
+            ],
+            "effects": [
+                "lifeRegen"
+            ],
+            "spawnChance": 50
+        },
+        "Mana ring": {
+            "description": "Increases mana regeneration by 5",
+            "points": [
+                5
+            ],
+            "effects": [
+                "manaRegen"
+            ],
+            "spawnChance": 50
+        },
+        "Reinforced Healing ring": {
+            "description": "Increases health regeneration by 7",
+            "points": [
+                7
+            ],
+            "effects": [
+                "lifeRegen"
+            ],
+            "spawnChance": 20
+        },
+        "Reinforced Mana ring": {
+            "description": "Increases mana regeneration by 7",
+            "points": [
+                7
+            ],
+            "effects": [
+                "manaRegen"
+            ],
+            "spawnChance": 20
+        },
+        "Regen Ring": {
+            "description": "Increases health and mana regeneration by 9",
+            "points": [
+                9,
+                9
+            ],
+            "effects": [
+                "lifeRegen",
+                "manaRegen"
+            ],
+            "spawnChance": 10
+        },
+        "Power Ring": {
+            "description": "It DOESNT increases health or mana. However it increases damage by 15",
+            "points": [
+                15
+            ],
+            "effects": [
+                "damage"
+            ],
+            "spawnChance": 5
+        }
+    },
+    "Shields": {
+        "Wood shield": {
+            "description": "A weak wooden shield. Increases defense by 5",
+            "def": 5,
+            "spawnChance": 50
+        },
+        "Reinforced wood shield": {
+            "description": "A sturdy wooden shield. Increases defense by 7",
+            "def": 7,
+            "spawnChance": 40
+        },
+        "Metal shield": {
+            "description": "A metal armored shield. Increases defense by 12",
+            "def": 12,
+            "spawnChance": 30
+        },
+        "Reinforced Metal shield": {
+            "description": "A reinforced metal shield. Increases defense by 15",
+            "def": 15,
+            "spawnChance": 20
+        },
+        "Dragon shield": {
+            "description": "A shield made of dragon scales. Increases defense by 20",
+            "def": 20,
+            "spawnChance": 10
+        },
+        "Berserker shield": {
+            "description": "A shield that carries a furious aura. Increases defense by 30.",
+            "def": 30,
+            "spawnChance": 10
+        },
+        "Golden shield": {
+            "description": "The most powerful shield, they say finding it is a bad omen. Increases defense by 35.  You feel a shiver run through your body",
+            "def": 35,
+            "spawnChance": 5
+        }
+    },
+    "Armors": {
+        "Metal": {
+            "helmet": {
+                "description": "A metal helmet, if it gets too hot you can end up getting roasted. Increases defense by 3",
+                "def": 3
+            },
+            "breastplate": {
+                "description": "A metal breastplate, if it gets too hot you can end up getting roasted. Increases defense by 5",
+                "def": 5
+            },
+            "legs": {
+                "description": "A metal leg, if it gets too hot you can end up getting roasted. Increases defense by 2",
+                "def": 2
+            }
+        },
+        "Gold": {
+            "helmet": {
+                "description": "A golden helmet, the goblins will go crazy when they see this shine. Increases defense by 5",
+                "def": 5
+            },
+            "breastplate": {
+                "description": "A golden breastplate, the goblins will go crazy when they see this shine. Increases defense by 7",
+                "def": 7
+            },
+            "legs": {
+                "description": "A golden leg, the goblins will go crazy when they see this shine. Increases defense by 3",
+                "def": 3
+            }
+        },
+        "Diamond": {
+            "helmet": {
+                "description": "A diamond helmet, almost indestructible! Increases defense by 6",
+                "def": 6
+            },
+            "breastplate": {
+                "description": "A diamond breastplate, almost indestructible! Increases defense by 9",
+                "def": 9
+            },
+            "legs": {
+                "description": "A diamond leg, almost indestructible! Increases defense by 5",
+                "def": 5
+            }
+        },
+        "Obsidian": {
+            "helmet": {
+                "description": "The obsidian helmet, if you can complete the armor you will be immune to fire damage  Increases defense by 8",
+                "def": 8
+            },
+            "breastplate": {
+                "description": "The obsidian breastplate, if you can complete the armor you will be immune to fire damage  Increases defense by 12",
+                "def": 12
+            },
+            "legs": {
+                "description": "The obsidian leg, if you can complete the armor you will be immune to fire damage  Increases defense by 5",
+                "def": 5
+            }
+        }
+    },
+    "Swords": {
+        "Wood sword": {
+            "description": "A weak and unsharp sword",
+            "atkDamage": 5,
+            "area": 2,
+            "effect": "none",
+            "particleColor": "none",
+            "spawnChance": 80
+        },
+        "Reinforced wood sword": {
+            "description": "A weak and somewhat sharp sword",
+            "atkDamage": 7,
+            "area": 2,
+            "effect": "none",
+            "particleColor": "none",
+            "spawnChance": 75
+        },
+        "Kraken tentacle": {
+            "description": "This sword was made from parts of a kraken. Water-type creatures will fear you.",
+            "atkDamage": 10,
+            "area": 3,
+            "effect": "fear",
+            "particleColor": "#328ba8",
+            "spawnChance": 50
+        },
+        "Volcano sword": {
+            "description": "Enemies hit by this sword burn to death",
+            "atkDamage": 15,
+            "area": 3,
+            "effect": "burn",
+            "particleColor": "#ff4400",
+            "spawnChance": 45
+        },
+        "Celestial spear": {
+            "description": "This heaven-given spear is especially effective against demons.",
+            "atkDamage": 18,
+            "area": 5,
+            "effect": "death",
+            "particleColor": "blue",
+            "spawnChance": 30
+        },
+        "Bonebraker": {
+            "description": "Skeletons will fear you",
+            "atkDamage": 20,
+            "area": 4,
+            "effect": "fear",
+            "particleColor": "#170029",
+            "spawnChance": 40
+        },
+        "Water blade": {
+            "description": "Living enemies are dehydrated in seconds",
+            "atkDamage": 12,
+            "area": 3,
+            "effect": "dehydrate",
+            "particleColor": "#003cff",
+            "spawnChance": 55
+        },
+        "Katana": {
+            "description": "This blade may be underrated but it's not bad at all.",
+            "atkDamage": 25,
+            "area": 4,
+            "effect": "none",
+            "particleColor": "#c9d6ff",
+            "spawnChance": 35
+        },
+        "Rusty sword": {
+            "description": "Too bad, this weapon won't help you much.",
+            "atkDamage": 5,
+            "area": 4,
+            "effect": "none",
+            "particleColor": "none",
+            "spawnChance": 85
+        },
+        "Magma wrath": {
+            "description": "If the volcano sword wasn't enough then this one will finish the job.",
+            "atkDamage": 30,
+            "area": 5,
+            "effect": "melt",
+            "particleColor": "#e32807",
+            "spawnChance": 25
+        },
+        "Skeleton blade": {
+            "description": "Skeletons will attack you furiously but they might give you better items.",
+            "atkDamage": 32,
+            "area": 5,
+            "effect": "lucky",
+            "particleColor": "#ababab",
+            "spawnChance": 20
+        },
+        "Earthshaking sword": {
+            "description": "The earth will shake and nearby enemies will fall",
+            "atkDamage": 36,
+            "area": 10,
+            "effect": "",
+            "particleColor": "#6e3601",
+            "spawnChance": 15
+        },
+        "Neutral spear": {
+            "description": "Enemies killed by this sword cannot be resurrected by necromancers.",
+            "atkDamage": 40,
+            "area": 4,
+            "effect": "neutral",
+            "particleColor": "#abffc7",
+            "spawnChance": 20
+        },
+        "Dwarf's sword": {
+            "description": "This dwarven blade was made to cut obsidian",
+            "atkDamage": 40,
+            "area": 4,
+            "effect": "death",
+            "particleColor": "#f2ff61",
+            "spawnChance": 20
+        },
+        "Ancient sword": {
+            "description": "This sword was used by the first hero. It is said that its aura makes enemies below level 30 flee.",
+            "atkDamage": 45,
+            "area": 5,
+            "effect": ">30fear",
+            "particleColor": "silver",
+            "spawnChance": 10
+        },
+        "Greed's edge": {
+            "description": "Enemies killed by this sword will drop 3 times more gold.",
+            "atkDamage": 45,
+            "area": 5,
+            "effect": "money",
+            "particleColor": "#e0d900",
+            "spawnChance": 10
+        },
+        "Cursed sword": {
+            "description": "The more enemies you kill, the stronger the sword becomes. Will it be a blessing or a curse?",
+            "atkDamage": 1,
+            "area": 5,
+            "effect": "none",
+            "particleColor": "#000000",
+            "spawnChance": 40
+        },
+        "Explosive terror": {
+            "description": "Enemies hit will be certain to die but the explosion is so strong that dropped items disappear",
+            "atkDamage": 5000,
+            "area": 10,
+            "effect": "unlucky",
+            "particleColor": "#ff8103",
+            "spawnChance": 10
+        },
+        "Thunder edge": {
+            "description": "The strongest blade in existence. That's all you need to know",
+            "atkDamage": 60,
+            "area": 15,
+            "effect": "eletric",
+            "particleColor": "#03fffb",
+            "spawnChance": 1
+        }
+    }
+}

@@ -5,13 +5,22 @@ class Listener {
             left: false,
             bottom: false,
             right: false,
-            inventory: false
+            inventory: false,
+            mouse: {
+                "click": false,
+                "x": 0,
+                "y": 0,
+            }
         };
 
-        this.inventoryKeyPressed = false; 
+        this.flagMouse = false;
+        this.inventoryKeyPressed = false;
 
         document.addEventListener("keydown", this.handleKeyDown.bind(this));
         document.addEventListener("keyup", this.handleKeyUp.bind(this));
+        document.addEventListener("mousedown", this.handleMouseDown.bind(this));
+        document.addEventListener("mouseup", this.handleMouseUp.bind(this));
+        document.addEventListener("mousemove", this.handleMouseMove.bind(this)); 
     }
 
     handleKeyDown(event) {
@@ -29,7 +38,7 @@ class Listener {
         }
         if (event.key === "e" && !this.inventoryKeyPressed) {
             this.moveSet.inventory = !this.moveSet.inventory;
-            this.inventoryKeyPressed = true; 
+            this.inventoryKeyPressed = true;
         }
     }
 
@@ -47,7 +56,30 @@ class Listener {
             this.moveSet.top = false;
         }
         if (event.key === "e") {
-            this.inventoryKeyPressed = false; 
+            this.inventoryKeyPressed = false;
         }
+    }
+
+    handleMouseDown(event) {
+        if (event.button === 0 && this.flagMouse) { 
+            this.moveSet.mouse["click"] = true;
+            this.moveSet.mouse["x"] = event.clientX;
+            this.moveSet.mouse["y"] = event.clientY;
+        }
+        this.flagMouse = false;
+    }
+
+    handleMouseUp(event) {
+        if (event.button === 0) { 
+            this.moveSet.mouse["click"] = false;
+            this.moveSet.mouse["x"] = 0;
+            this.moveSet.mouse["y"] = 0;
+            this.flagMouse = true;
+        }
+    }
+
+    handleMouseMove(event) {
+        this.moveSet.mouse["x"] = event.clientX;
+        this.moveSet.mouse["y"] = event.clientY;
     }
 }

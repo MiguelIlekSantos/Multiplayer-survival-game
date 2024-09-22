@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/itens', (req, res) => {
+    res.sendFile(path.join(__dirname, 'assets', 'itens.json'));
+});
+
 const TICK_RATE = 60;
 const TICK_INTERVAL = 1000 / TICK_RATE;
 
